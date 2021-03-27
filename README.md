@@ -5,7 +5,7 @@ Automotive is designated for controlling self driving car
 
 Create new flutter app by "flutter create automotive" command
 
-Put all folders (lib.rar,translate.rar and imgs.rar, fonts.rar,puspec.yaml) in the root folder (that has been created in #step6) after extracting them
+Put all files  in the root folder (that has been created in #step6)
 open emulator and run the app
 
 After this you can change app icon , go to automotive\android\app\src\main\res there are some folders start with mipmap , you should replace the img inside them by icon img in imgs folder but with the same name of previous img(ic_launcher)
