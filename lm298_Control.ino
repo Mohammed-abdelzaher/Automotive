@@ -1,12 +1,16 @@
+
+// Motor A connections
+#define ena 5
 #define in1 3
 #define in2 4
+// Motor B connections
+#define enb 6
 #define in3 7
 #define in4 8
-#define ena 5
-#define enb 6
 
 void setup() 
 {
+  // Set all the motor control pins to outputs
   pinMode(in1,OUTPUT);   
   pinMode(in2,OUTPUT);
   pinMode(in3,OUTPUT);
@@ -17,42 +21,52 @@ void setup()
 }
 void forward()
 {
-  digitalWrite(in1,0);
-  digitalWrite(in2,150);
-  digitalWrite(in3,0);
-  digitalWrite(in4,150);
+  // Set motors to maximum speed
+  // For PWM maximum possible values are 0 to 255
+  analogWrite(enA, 255);
+  analogWrite(enB, 255);
+  digitalWrite(in1, LOW);
+  digitalWrite(in2, HIGH);
+  digitalWrite(in3, LOW);
+  digitalWrite(in4, HIGH);
 }
 
 void reverse()
 {
-  digitalWrite(in1,150);
-  digitalWrite(in2,0);
-  digitalWrite(in3,150);
-  digitalWrite(in4,0);
+  analogWrite(enA, 255);
+  analogWrite(enB, 255);
+ digitalWrite(in1, HIGH);
+ digitalWrite(in2, LOW);
+ digitalWrite(in3, HIGH);
+ digitalWrite(in4, LOW);
 }
 
 void Tleft()
 {
-  digitalWrite(in1,0);
-  digitalWrite(in2,150);
-  digitalWrite(in3,0);
-  digitalWrite(in4,150);
+  analogWrite(enA, 255);
+  analogWrite(enB, 255);
+  digitalWrite(in1,LOW);
+  digitalWrite(in2,HIGH);
+  digitalWrite(in3,LOW);
+  digitalWrite(in4,HIGH);
 }
 
 void Tright()
 {
-  digitalWrite(in1,150);
-  digitalWrite(in2,0);
-  digitalWrite(in3,0);
-  digitalWrite(in4,150);
+  analogWrite(enA, 255);
+  analogWrite(enB, 255);
+  digitalWrite(in1,HIGH);
+  digitalWrite(in2,LOW);
+  digitalWrite(in3,LOW);
+  digitalWrite(in4,HIGH);
 }
 
 void off()
 {
-  digitalWrite(in1,0);
-  digitalWrite(in2,0);
-  digitalWrite(in3,0);
-  digitalWrite(in4,0);
+  digitalWrite(in1,LOW);
+  digitalWrite(in2,LOW);
+  digitalWrite(in3,LOW);
+  digitalWrite(in4,LOW);
 }
 
 void loop()
