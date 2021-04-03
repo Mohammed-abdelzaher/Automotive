@@ -11,8 +11,8 @@ void setup()
   pinMode(in2,OUTPUT);
   pinMode(in3,OUTPUT);
   pinMode(in4,OUTPUT);
-  pinMode(ena,INPUT);
-  pinMode(enb,INPUT);
+  pinMode(ena,OUTPUT);
+  pinMode(enb,OUTPUT);
 
 }
 void forward()
